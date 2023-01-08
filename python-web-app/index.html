@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <header>
+        <h1>手書き数字推論で遊ぼう</h1>
+    </header>
+    <main>
+        <section>
+            <h2>数字を書いてください</h2>
+            <canvas id="draw-area" width="280px" height="280px"></canvas>
+            <div class="buttons">
+                <button id="predict-button">推論実行</button>
+                <button id="clear-button">書き直す</button>
+            </div>
+        </section>
+        <section>
+            <h2>推論結果</h2>
+            <div class="result-image-table">
+                <div id="result-image"></div>
+                <table class="result-table">
+                    <thead>
+                        <tr>
+                            <th>数字</th>
+                            <th>確率</th>
+                        </tr>
+                    </thead>
+                    <tbody id="result-table-body"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/handwriting-canvas@0.1.0/dist/main.min.js"></script>
+    <script src="/static/main.js"></script>
+</body>
+</html>
